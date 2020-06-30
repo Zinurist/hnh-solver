@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hare and Hounds</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="solver.js"></script>
+</head>
+<body>
+
+<h1>Hare and Hounds Solver</h1>
+
+<div id="boardWrapper">
+    <div id="board">
+        <img id="boardimg" src="imgs/board.png">
+    </div>
+</div>
+
+<div id="info">
+    <div id="btns">
+        <button onclick="solve(1)">Solve Hare</button>
+        <button onclick="solve(2)">Solve Hound</button>
+        <button onclick="resetBoard()">Reset board</button>
+    </div>
+    <p id="fetchStatus">Status: ...</p>
+    <p>Drag pieces and choose what player to solve for. Read <a href="https://en.wikipedia.org/wiki/Hare_games#Gameplay_and_rules">here</a> about the rules of hare and hounds.</p>
+</div>
+</body>
+</html>
