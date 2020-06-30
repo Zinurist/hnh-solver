@@ -201,7 +201,7 @@ class HareAndHoundsGame(board: ByteArray = byteArrayOf(HOUND, HOUND, EMPTY, HOUN
 }
 
 
-fun main() {
+fun interactiveTest() {
     val board = byteArrayOf(HOUND, HOUND, EMPTY, HOUND, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, HARE)
     //val board = byteArrayOf(EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, HOUND, EMPTY, HOUND, HOUND, EMPTY, HARE)
     //val board = byteArrayOf(0, 0, 0, 0, 2, 2, 0, 1, 0, 2, 0)
