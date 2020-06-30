@@ -142,7 +142,7 @@ data class HnHState(var board: ByteArray, val player: Byte) : GameState<Pair<Int
                 }
                 HOUND -> houndFound = true
             }
-            if (pos%3 == 0 && pos>0 && houndFound) break@search
+            if (pos%3 == 0 && houndFound) break@search
             pos++
             if (pos >= 11) throw IllegalStateException("No hare/hound found")
         }
