@@ -27,4 +27,22 @@ class HnHSolverTests {
         Assertions.assertEquals(hash1, HnHState(board1, HARE).hashCode())
     }
 
+
+    @Test
+    fun gameOverTest() {
+        val board1 = byteArrayOf(HOUND, HOUND, HARE, HOUND, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY)
+        val board2 = byteArrayOf(HARE, HOUND, HOUND, EMPTY, EMPTY, EMPTY, EMPTY, HOUND, EMPTY, EMPTY, EMPTY)
+        val board3 = byteArrayOf(EMPTY, HOUND, HOUND, HARE, EMPTY, EMPTY, EMPTY, EMPTY, HOUND, EMPTY, EMPTY)
+        val board4 = byteArrayOf(EMPTY, EMPTY, EMPTY, EMPTY, HARE, HOUND, HOUND, EMPTY, EMPTY, EMPTY, HOUND)
+        val board5 = byteArrayOf(EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, HOUND, HOUND, HOUND, HARE)
+
+        listOf(HARE, HOUND).forEach { player ->
+            Assertions.assertTrue(HnHState(board1, player).moves().isNotEmpty())
+            Assertions.assertTrue(HnHState(board2, player).moves().isEmpty())
+            Assertions.assertTrue(HnHState(board3, player).moves().isEmpty())
+            Assertions.assertTrue(HnHState(board4, player).moves().isEmpty())
+            Assertions.assertTrue(HnHState(board5, player).moves().isEmpty())
+        }
+    }
+
 }
